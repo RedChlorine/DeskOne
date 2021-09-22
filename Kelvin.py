@@ -1,11 +1,18 @@
+import pytemperature
+
+converted = None
+
 print("This is a Kelvin Calculator!")
 temperature = float(input("What is the temperature? "))
-unit = input("(C)elcius? or (F)arenheit? ")
-converted = float(temperature+273.6)
+while !converted:
+   unit = input("(C)elcius? or (F)arenheit? ")
 
-if unit.upper() == "C":
-   print(str(converted)+"K is the result")
-elif unit.upper() =="F":
-   print(str((converted-305)*5/9+273) +"K is the result")
+   if unit.upper() == "C":   
+      converted = pytemperature.c2k(temperature)
+   elif unit.upper() =="F":   
+      converted =pytemperature.f2k(temperature)
+   else:
+      converted = None
+   
+print(f"{converted}K is the result")
 print("There ya go!")
-
