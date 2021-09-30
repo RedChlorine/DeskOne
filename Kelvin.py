@@ -20,3 +20,5 @@ while not converted:
 
 print(f"{converted}K is the result")
 print("There ya go!")
+
+#I figured out how to use git and github
